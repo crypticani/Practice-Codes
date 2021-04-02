@@ -1,0 +1,59 @@
+<!-- Loading animation containing two circles rotating in opposite direction -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <style>
+      @keyframes spinner {
+        0% {
+          transform: rotateZ(0deg)
+        }
+        100% {
+          transform: rotateZ(360deg)
+        }
+      }
+@keyframes spinner1 {
+        0% {
+          transform: rotateZ(0deg)
+        }
+        100% {
+          transform: rotateZ(-360deg)
+        }
+      }
+      .spin::before {
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 5px #cfd0d1;
+        border-bottom-color: #1c87c9;
+border-right-color: #1c87c9;
+border-left-color: #1c87c9;
+        border-radius: 50%;
+        content: "";
+        height: 82px;
+        width: 82px;
+        position: absolute;
+        top: 12%;
+        left: 11%;
+      }
+.spin1::before {
+        animation: 1.5s linear infinite spinner1;
+        animation-play-state: inherit;
+        border: solid 5px #cfd0d1;
+        border-bottom-color: #1c87c9;
+border-left-color: #1c87c9;
+border-right-color: #1c87c9;
+        border-radius: 50%;
+        content: "";
+        height: 110px;
+        width: 110px;
+        position: absolute;
+        top: 10%;
+        left: 8%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spin"></div>
+<div class="spin1"></div>
+  </body>
+</html>
